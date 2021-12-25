@@ -1,0 +1,48 @@
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: auto;
+  font-family: arial;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 50px;
+}
+
+.left__side {
+  /* background-color: lightgray; */
+}
+
+.right__side {
+  /* background-color: gray; */
+}
+
+h1 {
+  text-align: center;
+  background-color: lightskyblue;
+  color: white;
+  padding: 10px 0;
+}
+
+/* card design */
+
+.card {
+  padding: 20px 50px;
+  border: 1px solid #f0f0f0;
+  margin-top: 10px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card h3::first-letter,
+.card p::first-letter {
+  text-transform: uppercase;
+}
+
+.card p {
+  line-height: 1.6;
+}

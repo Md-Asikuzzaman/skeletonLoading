@@ -1,0 +1,77 @@
+.skeleton {
+  width: 100%;
+  height: 100px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+
+.text {
+  width: 100%;
+  height: 15px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  margin: 5px 0;
+}
+
+.title {
+  width: 50%;
+  height: 30px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+}
+
+/* Skeleton user */
+
+.skeleton__wrapper {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #f4f4f4;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.skeleton__wrapper .skeleton__move {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* background-color: red; */
+  /* transform: translateX(100px); */
+  animation: loading 1.5s infinite linear;
+}
+
+.skeleton__wrapper .skeleton__move::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 10%;
+  background-color: rgba(255, 255, 255, 0.5);
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transform: skewY(-10deg);
+}
+
+/* animation */
+
+@keyframes loading {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
